@@ -1,5 +1,7 @@
 import Hero from '@/components/Hero'
+import Slider from '@/components/Slider'
 import Head from 'next/head'
+import { SliderData } from '@/pages/api/SliderData'
 
 export default function Home() {
   return (
@@ -10,7 +12,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero />
+      <Hero heading='Captur Photography' message='I Capture moments in nature and keep them alive.' />
+      <Slider slides={SliderData} />
     </>
   )
 }
