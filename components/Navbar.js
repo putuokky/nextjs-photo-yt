@@ -38,7 +38,7 @@ const Navbar = () => {
             <Link href='/#gallery'>Gallery</Link>
           </li>
           <li className='p-4'>
-            <Link href='/portfolio'>Work</Link>
+            <Link href='/work'>Work</Link>
           </li>
           <li className='p-4'>
             <Link href='/contact'>Contact</Link>
@@ -50,24 +50,24 @@ const Navbar = () => {
           {nav ? <AiOutlineClose size={20} style={{ color: `${textColor}` }} /> : <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />}
         </div>
         {/* {Mobile Menu} */}
-        <div className={nav ? 'absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center w-full h-screen text-center duration-300 ease-in bg-black sm:hidden' : 'absolute top-0 bottom-0 left-[100%] right-0 flex items-center justify-center w-full h-screen text-center duration-300 ease-in bg-black sm:hidden'}>
+        <div className={`absolute top-0 ${nav ? 'left-0' : 'left-full'} right-0 bottom-0 flex justify-center items-center w-full h-screen sm:hidden bg-black text-center ease-in duration-300`}>
           <ul>
-            <li className='p-4 text-4xl hover:text-gray-500'>
+            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/'>Home</Link>
             </li>
-            <li className='p-4 text-4xl hover:text-gray-500'>
+            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/#gallery'>Gallery</Link>
             </li>
-            <li className='p-4 text-4xl hover:text-gray-500'>
-              <Link href='/portfolio'>Work</Link>
+            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+              <Link href='/work'>Work</Link>
             </li>
-            <li className='p-4 text-4xl hover:text-gray-500'>
+            <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
               <Link href='/contact'>Contact</Link>
             </li>
           </ul>
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 
